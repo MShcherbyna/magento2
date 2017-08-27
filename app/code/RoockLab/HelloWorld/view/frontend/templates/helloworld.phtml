@@ -1,0 +1,20 @@
+<h2><?php echo $this->getHelloWorldTxt(); ?></h2>
+
+<div data-bind="scope: 'koexample'">
+<!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+ 
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "koexample": {
+                        "component": "RoockLab_HelloWorld/js/koexample",
+                        "template" : "RoockLab_HelloWorld/example"
+                    }
+                }
+            }
+        }
+    }
+</script>
